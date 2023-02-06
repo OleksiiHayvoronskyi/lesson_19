@@ -5,13 +5,14 @@ import networkx as nx
 # cities = ['city 1', 'city 2', km]...]. З отриманого списку створіть граф.
 # Візуалізуйте отриманий граф.
 
+print('--- Task 1 ---')
 
 G = nx.Graph()
 
 # Вузли.
 cities = [('Hadiach', 'Zinkiv', 45), ('Hadiach', 'Lebedyn', 60),
           ('Hadiach', 'Myrhorod', 61), ('Hadiach', 'Zavodske', 67),
-          ('Lokhvytsia', 'Hadiach', 81), ('Hadiach', 'Vorozhba', 94)]
+          ('Lokhvytsia', 'Hadiach', 81), ('Hadiach', 'Lokhvytsia', 94)]
 
 
 # Визанчаю список ребер.
@@ -25,7 +26,7 @@ G.add_nodes_from(cities)
 G.add_edges_from(edges)
 
 # Візуалізую граф.
-nx.draw(G, with_labels=True, font_weight='light', font_size=8,
+nx.draw(G, with_labels=True, font_weight='light', font_size=7,
         font_color='blue', node_color='y', node_shape='o', width=1.5,
         edge_color="grey")
 plt.show()
